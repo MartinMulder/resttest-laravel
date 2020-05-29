@@ -1,0 +1,37 @@
+{
+    "name": "martinmulder/resttest-laravel",
+    "description": "Rest test client for Laravel.",
+    "keywords": ["rest", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.2",
+        "ext-curl": "*",
+        "illuminate/support": "^5.6|^6.0|^7.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "~3.7"
+    },
+    "archive": {
+        "exclude": ["/tests"]
+    },
+    "autoload": {
+        "psr-4": {
+            "RestTest\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RestTest\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RestTest\\Laravel\\RestTestServiceProvider"
+            ]
+        }
+    }
+}
